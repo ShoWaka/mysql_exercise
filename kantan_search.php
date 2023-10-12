@@ -25,7 +25,7 @@ try {
     foreach ($stmt as $row) {
         echo "<div>$row[0] : $row[1] : $row[2]</div>";
     }
-    echo "<br> <a href='kantan.php'>トップメニューに戻ります</a>";
+    echo "<br> <a href='index.php'>トップメニューに戻ります</a>";
 } catch (PDOException $e) {
     // エラー発生
     echo $e->getMessage();
