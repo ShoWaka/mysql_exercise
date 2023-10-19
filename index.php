@@ -14,14 +14,15 @@
 <body>
     <?php
     try {
+        require_once("db_info.php");
         // データベースに接続
         $pdo = new PDO(
             // ホスト名、データベース名
-            'mysql:host=localhost;dbname=db1;',
+            "mysql:host=$SERV;dbname=$DBNAME;",
             // ユーザー名
-            'root',
+            "$USER",
             // パスワード
-            'root',
+            "$PASS",
             // レコード列名をキーとして取得させる
             // [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC]
         );
